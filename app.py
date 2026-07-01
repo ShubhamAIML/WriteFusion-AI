@@ -28,6 +28,9 @@ from collections import Counter
 from flask import Flask, render_template, request, jsonify
 
 import tensorflow as tf
+import tensorflow as tf
+tf.config.threading.set_intra_op_parallelism_threads(1)
+tf.config.threading.set_inter_op_parallelism_threads(1)
 from tensorflow.keras import layers, Model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
