@@ -1,4 +1,4 @@
-﻿"""
+"""
 Language Model Inspector â€” Flask Backend
 ==========================================
 Serves your trained Transformer model for:
@@ -505,7 +505,7 @@ def compute_perplexity(text):
     for i in range(1, len(ids)):
         context = ids[max(0, i - SEQ_LEN):i]
         padded = pad_sequences([context], maxlen=SEQ_LEN, padding='pre')[0]
-        probs = model.predict(np.array([padded]), verbose=0)[0]
+        probs = model(np.array([padded]), training=False).numpy()[0]
         true_id = ids[i]
         p = max(probs[true_id], 1e-10)
         losses.append(-np.log(p))
@@ -584,7 +584,7 @@ def generate():
     for _ in range(max_words):
         ids = tokenizer.texts_to_sequences([text])[0][-SEQ_LEN:]
         padded = pad_sequences([ids], maxlen=SEQ_LEN, padding='pre')[0]
-        raw_probs = model.predict(np.array([padded]), verbose=0)[0].astype('float64')
+        raw_probs = model(np.array([padded]), training=False).numpy()[0].astype('float64')
 
         next_id, final_probs, decode_info = decode_next_token(
             raw_probs=raw_probs,
