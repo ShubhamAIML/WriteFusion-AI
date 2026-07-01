@@ -220,7 +220,7 @@ def predict_distribution(text, temperature=0.8):
     ids = tokenizer.texts_to_sequences([text])[0][-SEQ_LEN:]
     padded = pad_sequences([ids], maxlen=SEQ_LEN, padding='pre')[0]
 
-    probs = model.predict(np.array([padded]), verbose=0)[0].astype('float64')
+    probs = model(np.array([padded]), training=False).numpy()[0].astype('float64')
     probs = np.log(probs + 1e-10) / max(temperature, 1e-6)
     probs = np.exp(probs)
     probs /= probs.sum()
