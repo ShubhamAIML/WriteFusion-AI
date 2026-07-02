@@ -23,7 +23,7 @@ The app works like a minimal writing assistant: type in the editor and the model
 
 </div>
 <div align="center">
-<img src="static/WriteFusion_AI.gif" alt="UI intertface demo" width= Auto>
+<img src="static/WriteFusion_AI.gif" alt="UI intertface demo" width= 100%>
 </div>
 
 ---
