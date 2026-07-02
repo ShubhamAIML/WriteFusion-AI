@@ -23,7 +23,7 @@ The app works like a minimal writing assistant: type in the editor and the model
 
 </div>
 <div align="center">
-<img src="static/WriteFusion_AI.gif" alt="UI intertface demo" width="900">
+<img src="static/WriteFusion_AI.gif" alt="UI intertface demo" width= Auto>
 </div>
 
 ---
@@ -126,7 +126,7 @@ Trained on a T4-class GPU pipeline in Colab, with `EarlyStopping`, `ModelCheckpo
 | Random-chance baseline (1 / 12,000) | 0.008% |
 
 <div align="center">
-<img src="static/training_plot_dark.webp" alt="Training and validation loss/accuracy curves" width="700">
+<img src="static/training_plot_dark.webp" alt="Training and validation loss/accuracy curves" width= Auto>
 </div>
 
 16.5% top-1 accuracy sounds low in isolation, but next-word prediction over a 12k-word open vocabulary has many valid continuations for any given context — it's meaningfully better than the ~0.008% random baseline, and Top-K/Top-P sampling (rather than argmax) is what the app actually uses for generation, so it isn't relying on getting the single "correct" word right.
