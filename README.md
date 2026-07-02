@@ -12,10 +12,7 @@ Live next-word prediction · story & paragraph generation · 8 decoding strategi
 [![Gunicorn](https://img.shields.io/badge/Gunicorn-production-499848?logo=gunicorn&logoColor=white)](https://gunicorn.org/)
 [![Deploy](https://img.shields.io/badge/Deploy-Render-46E3B7?logo=render&logoColor=white)](https://render.com/)
 
-</div>
-<div align="center">
-<img src="static/WriteFusion_AI.gif" alt="UI intertface demo" width="700">
-</div>
+
 ---
 
 ## Overview
@@ -24,7 +21,10 @@ Live next-word prediction · story & paragraph generation · 8 decoding strategi
 
 The app works like a minimal writing assistant: type in the editor and the model suggests the next word as italic "ghost text" (`Tab` to accept), or hand it a seed sentence and let it write full stories/paragraphs using any of 8 different sampling strategies. A built-in "Model Development" panel documents the entire pipeline — from raw text to deployed model — for anyone curious about how it actually works under the hood.
 
-> 📸 **Add a demo here:** a screen recording or GIF of the ghost-text prediction and story-generation modes would make this section pop — the UI (light/dark, animated generation, attention highlighting) is one of the strongest parts of this project.
+</div>
+<div align="center">
+<img src="static/WriteFusion_AI.gif" alt="UI intertface demo" width="700">
+</div>
 
 ---
 
