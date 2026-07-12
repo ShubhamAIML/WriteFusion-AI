@@ -90,5 +90,3 @@ WriteFusion AI solves this by pairing a custom-trained Transformer with a UI des
 - Export generated text (copy/download) directly from UI.
 
 ---
-
-*This PRD was reconstructed from the public repository README and structure; sections 8–9 are suggested additions rather than confirmed existing functionality — flag any inaccuracies and I'll revise.*
